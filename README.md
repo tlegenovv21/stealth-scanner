@@ -1,14 +1,15 @@
-# 🕵️ Python Stealth SYN Scanner
+# ⚡ Python Stealth SYN Scanner (Multi-Threaded)
 
-A lightweight network scanner built with **Python** and **Scapy**. This tool performs a "Stealth Scan" (TCP Half-Open Scan) to identify open ports without completing the 3-way handshake, making it less likely to be logged by target firewalls.
+A high-performance network scanner built with **Python** and **Scapy**. This tool performs "Stealth Scans" (TCP Half-Open) and uses **Multi-Threading** to scan thousands of ports in seconds.
 
 ## 🚀 Features
-* **Stealth Mode:** Uses raw packet manipulation to send `SYN` packets and analyze `SYN-ACK` vs `RST` responses.
-* **Custom Packet Crafting:** Bypasses standard socket libraries by constructing IP/TCP headers manually.
-* **Service Detection:** Scans common ports (FTP, SSH, DNS, HTTP, HTTPS) to identify running services.
+* **Stealth Mode:** Uses raw packet manipulation (SYN -> SYN-ACK -> RST) to avoid completing the TCP handshake.
+* **Multi-Threading:** Implements `ThreadPoolExecutor` to scan hundreds of ports simultaneously.
+* **CLI Arguments:** Full command-line interface using `argparse` for flexible testing.
+* **Custom Packet Crafting:** Bypasses standard socket libraries by manually constructing IP/TCP headers.
 
 ## 🛠️ Installation
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/stealth-scanner.git](https://github.com/YOUR_USERNAME/stealth-scanner.git)
+   git clone [https://github.com/YOUR_USERNAME/stealth-scanner.git](https://github.com/tlegenovv21/stealth-scanner.git)
